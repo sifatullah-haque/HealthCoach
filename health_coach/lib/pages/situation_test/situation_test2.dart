@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/const/button.dart';
 import 'package:health_coach/const/color_is.dart';
 
-class SituationTest extends StatelessWidget {
-  const SituationTest({super.key});
+class SituationTest2 extends StatelessWidget {
+  const SituationTest2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +29,11 @@ class SituationTest extends StatelessWidget {
                 width: 200.w,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15.0,
             ),
-            Text(
-              "Question: 01/42",
+            const Text(
+              "Question: 02/42",
             ),
             SizedBox(height: 25.h),
             Container(
@@ -49,7 +49,7 @@ class SituationTest extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Center(
                   child: Text(
-                    "I have difficulty understanding abstract ideas.",
+                    "I am not interested in other people's problems.",
                     style: TextStyle(
                         fontSize: 24.sp,
                         fontWeight: FontWeight.w500,
@@ -59,17 +59,17 @@ class SituationTest extends StatelessWidget {
               ),
             ),
             SizedBox(height: 25.h),
-            CheckOption(text: "Disagree"),
+            const CheckOption(text: "Disagree"),
             SizedBox(height: 15.h),
-            CheckOption(text: "Slightly Disagree"),
+            const CheckOption(text: "Slightly Disagree"),
             SizedBox(height: 15.h),
-            CheckOption(text: "Neutral"),
+            const CheckOption(text: "Neutral"),
             SizedBox(height: 15.h),
-            CheckOption(text: "Slightly Agree"),
+            const CheckOption(text: "Slightly Agree"),
             SizedBox(height: 15.h),
-            CheckOption(text: "Agree"),
+            const CheckOption(text: "Agree"),
             SizedBox(height: 50.h),
-            Center(child: button(text: "Next", size: 160))
+            const Center(child: button(text: "Next", size: 160))
           ],
         ),
       ),
@@ -85,6 +85,7 @@ class CheckOption extends StatefulWidget {
   }) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _CheckOptionState createState() => _CheckOptionState();
 }
 

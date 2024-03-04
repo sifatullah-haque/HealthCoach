@@ -51,11 +51,11 @@ class Login extends StatelessWidget {
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                         borderSide:
-                            const BorderSide(color: Coloris.green, width: 1.0)),
+                            const BorderSide(color: Coloris.green, width: 2.0)),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                         borderSide: const BorderSide(
-                            color: Coloris.borderGrey, width: 2.0))),
+                            color: Coloris.liteGreen, width: 2.0))),
               ),
               SizedBox(
                 height: 15.h,
@@ -73,11 +73,11 @@ class Login extends StatelessWidget {
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                         borderSide:
-                            const BorderSide(color: Coloris.green, width: 1.0)),
+                            const BorderSide(color: Coloris.green, width: 2.0)),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                         borderSide: const BorderSide(
-                            color: Coloris.borderGrey, width: 2.0))),
+                            color: Coloris.liteGreen, width: 2.0))),
               ),
               SizedBox(
                 height: 15.h,
