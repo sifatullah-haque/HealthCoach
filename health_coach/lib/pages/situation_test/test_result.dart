@@ -188,24 +188,6 @@ class DoctorsBlog extends StatelessWidget {
                 "Read More",
                 style: TextStyle(color: Coloris.green),
               )
-              // Row(
-              //   children: [
-              //     Icon(
-              //       Icons.favorite_outline,
-              //       color: color,
-              //     ),
-              //     SizedBox(width: 10.w),
-              //     const Icon(
-              //       Icons.messenger_outline_rounded,
-              //       color: Coloris.liteGrey,
-              //     ),
-              //     SizedBox(width: 10.w),
-              //     const Icon(
-              //       Icons.share_outlined,
-              //       color: Coloris.liteGrey,
-              //     ),
-              //   ],
-              // )
             ],
           ),
         )
