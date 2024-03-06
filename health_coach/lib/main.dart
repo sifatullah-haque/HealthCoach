@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:health_coach/pages/login_signup/login.dart';
+import 'package:health_coach/pages/home_page/homepage.dart';
+
 import 'package:health_coach/pages/situation_test/test_result.dart';
+import 'package:health_coach/pages/user_profile/user_profile.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: "Inter",
           ),
-          home: TestResult(),
+          home: UserProfile(),
         );
       },
     );
