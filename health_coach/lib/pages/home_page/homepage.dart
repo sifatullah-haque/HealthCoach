@@ -1,18 +1,13 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
+
 import 'package:health_coach/const/color_is.dart';
 import 'package:health_coach/const/homepage_const/homepage_const.dart';
+import 'package:health_coach/pages/doctors_profile/doctors_profile.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,11 +52,19 @@ class _HomePageState extends State<HomePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    const ActiveDoctorList(
-                      image: "blog1.png",
-                      name: "Dr. Ifram Dewan",
-                      previousPrice: " ৳850",
-                      currentPrice: " ৳99",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DoctorsProfile()));
+                      },
+                      child: const ActiveDoctorList(
+                        image: "blog1.png",
+                        name: "Dr. Ifram Dewan",
+                        previousPrice: " ৳850",
+                        currentPrice: " ৳99",
+                      ),
                     ),
                     SizedBox(width: 20.w),
                     const ActiveDoctorList(
@@ -109,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                     text: "Cardiology",
                   ),
                   ContainerBox(
-                    image: "cat2.jpg",
+                    image: "cat4.jpg",
                     text: "Cardiology",
                   ),
                 ],
@@ -123,11 +126,11 @@ class _HomePageState extends State<HomePage> {
                     text: "Cardiology",
                   ),
                   ContainerBox(
-                    image: "cat4.jpg",
+                    image: "cat6.jpg",
                     text: "Cardiology",
                   ),
                   ContainerBox(
-                    image: "cat6.jpg",
+                    image: "cat2.jpg",
                     text: "Cardiology",
                   ),
                 ],

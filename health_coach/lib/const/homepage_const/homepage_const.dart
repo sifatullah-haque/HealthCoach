@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/const/color_is.dart';
+import 'package:health_coach/pages/situation_test/situation_test.dart';
 
 class RecommendedOptions extends StatelessWidget {
   final String images;
@@ -167,7 +168,13 @@ class HeroBanners extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset("assets/images/banner4.png", height: 115.h),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SituationTest()));
+              },
+              child: Image.asset("assets/images/banner4.png", height: 115.h),
+            ),
             Image.asset("assets/images/banner5.png", height: 115.h)
           ],
         ),

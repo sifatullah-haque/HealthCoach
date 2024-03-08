@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/const/color_is.dart';
+import 'package:health_coach/pages/home_page/homepage_test.dart';
 
 class button extends StatelessWidget {
   final String text;
   final double size;
+  final Widget destination;
 
   const button({
     super.key,
     required this.text,
     required this.size,
+    required this.destination,
   });
 
   @override
@@ -21,7 +24,10 @@ class button extends StatelessWidget {
             backgroundColor: const MaterialStatePropertyAll(Coloris.green),
             shape: MaterialStateProperty.all(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0)))),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => destination));
+        },
         child: Text(
           text,
           style: TextStyle(

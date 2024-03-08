@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/const/button.dart';
 import 'package:health_coach/const/color_is.dart';
 import 'package:health_coach/const/userProfile_const/userProfile_const.dart';
+import 'package:health_coach/pages/messages/messages.dart';
 import 'package:health_coach/pages/situation_test/test_result.dart';
 
 class DoctorsProfile extends StatelessWidget {
@@ -113,7 +114,10 @@ class DoctorsProfile extends StatelessWidget {
                                 ),
                                 SizedBox(height: 15.h),
                                 const button(
-                                    text: "Talk With Doctor", size: 250)
+                                  text: "Talk With Doctor",
+                                  size: 250,
+                                  destination: Messages(),
+                                )
                               ],
                             ),
                           ),
@@ -150,7 +154,10 @@ class DoctorsProfile extends StatelessWidget {
                                   SizedBox(height: 15.h),
                                   const Center(
                                     child: button(
-                                        text: "Talk With Doctor", size: 250),
+                                      text: "Talk With Doctor",
+                                      size: 250,
+                                      destination: Messages(),
+                                    ),
                                   )
                                 ],
                               ),
@@ -260,7 +267,12 @@ class DetailsDoctorTabBar extends StatelessWidget {
           Experience: "5 Years",
         ),
         SizedBox(height: 25.h),
-        const Center(child: button(text: "Talk With Doctor", size: 250))
+        const Center(
+            child: button(
+          text: "Talk With Doctor",
+          size: 250,
+          destination: Messages(),
+        ))
       ],
     );
   }

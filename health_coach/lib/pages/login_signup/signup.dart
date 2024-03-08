@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/const/button.dart';
 import 'package:health_coach/const/color_is.dart';
+import 'package:health_coach/pages/home_page/homepage_test.dart';
 
 class signUp extends StatelessWidget {
   const signUp({super.key});
@@ -127,6 +128,7 @@ class signUp extends StatelessWidget {
               const button(
                 text: "Create",
                 size: 300,
+                destination: HomePageTest(),
               ),
               SizedBox(height: 50.h),
               const Row(
