@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/pages/doctors_profile/doctors_profile.dart';
 import 'package:health_coach/pages/home_page/homepage.dart';
+import 'package:health_coach/pages/home_page/homepage_test.dart';
 
 import 'package:health_coach/pages/situation_test/test_result.dart';
 import 'package:health_coach/pages/user_profile/user_profile.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: "Inter",
           ),
-          home: DoctorsProfile(),
+          home: HomePageTest(),
         );
       },
     );
