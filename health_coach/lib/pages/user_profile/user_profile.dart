@@ -67,66 +67,12 @@ class UserProfile extends StatelessWidget {
                           ),
                           // Content for "Follow" tab
                           Container(
-                            child: SingleChildScrollView(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(height: 15.h),
-                                  SectionWithGreenBorder(text: "Follow Doctos"),
-                                  SizedBox(height: 15.h),
-                                  const IconUserDoctorWithDesignation(
-                                    image: "profile1.png",
-                                    name: "Dr. Ifram Dewan",
-                                    designation: "Professior",
-                                    education: "MBBS, FCPS, MD",
-                                  ),
-                                  SizedBox(height: 15.h),
-                                  const IconUserDoctorWithDesignation(
-                                    image: "profile6.png",
-                                    name: "Dr. Khairul Hasan",
-                                    designation: "Professior",
-                                    education: "MBBS, FCPS, MD",
-                                  ),
-                                  SizedBox(height: 15.h),
-                                  const IconUserDoctorWithDesignation(
-                                    image: "profile5.png",
-                                    name: "Dr. Faysal Ahmed",
-                                    designation: "Professior",
-                                    education: "MBBS, FCPS, MD",
-                                  ),
-                                  SizedBox(height: 25.h),
-                                  SectionWithGreenBorder(
-                                      text: "Follow Consultant"),
-                                  SizedBox(height: 15.h),
-                                  const IconUserDoctorWithDesignation(
-                                    image: "profile7.png",
-                                    name: "Dr. Sifatullah Haque",
-                                    designation: "Professior",
-                                    education: "MBBS, FCPS, MD",
-                                  ),
-                                  SizedBox(height: 15.h),
-                                  const IconUserDoctorWithDesignation(
-                                    image: "profile4.png",
-                                    name: "Dr. Sumaiya Rahman",
-                                    designation: "Professior",
-                                    education: "MBBS, FCPS, MD",
-                                  ),
-                                  SizedBox(height: 15.h),
-                                  const IconUserDoctorWithDesignation(
-                                    image: "blog2.png",
-                                    name: "Dr. Saharaz Hamim",
-                                    designation: "Professior",
-                                    education: "MBBS, FCPS, MD",
-                                  ),
-                                  SizedBox(height: 15.h),
-                                ],
-                              ),
-                            ),
+                            child: FollowTabBar(),
                           ),
                           // Content for "Blog" tab
                           Container(
                             child: Center(
-                              child: Text("Blog Tab Content"),
+                              child: BlogTabBar(),
                             ),
                           ),
                           // Content for "More" tab
@@ -149,6 +95,129 @@ class UserProfile extends StatelessWidget {
   }
 }
 
+class BlogTabBar extends StatelessWidget {
+  const BlogTabBar({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SectionWithGreenBorder(text: "From Doctors"),
+          SizedBox(height: 15.h),
+          DoctorsBlog(
+            image: "blog1.png",
+            title: "What if you fall in love",
+            description:
+                "Falling in love is part of life. Being in love is not a ...",
+          ),
+          SizedBox(height: 15.h),
+          DoctorsBlog(
+            image: "blog2.png",
+            title: "It's Okay to be sad",
+            description: "Being Same make us way more strong. There are ...",
+          ),
+          SizedBox(height: 15.h),
+          DoctorsBlog(
+            image: "blog3.png",
+            title: "How to be Happy?",
+            description: "Happiness lies deep into our. Here are kind of ...",
+          ),
+          SizedBox(height: 15.h),
+          const SectionWithGreenBorder(text: "From Consultants"),
+          SizedBox(height: 15.h),
+          DoctorsBlog(
+            image: "blog2.png",
+            title: "How to be Happy?",
+            description: "Happiness lies deep into our. Here are kind of ...",
+          ),
+          SizedBox(height: 15.h),
+          DoctorsBlog(
+            image: "blog1.png",
+            title: "It's Okay to be sad",
+            description: "Being Same make us way more strong. There are ...",
+          ),
+          SizedBox(height: 15.h),
+          DoctorsBlog(
+            image: "blog2.png",
+            title: "What if you fall in love",
+            description:
+                "Falling in love is part of life. Being in love is not a ...",
+          ),
+          SizedBox(height: 15.h),
+        ],
+      ),
+    );
+  }
+}
+
+class FollowTabBar extends StatelessWidget {
+  const FollowTabBar({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 15.h),
+          const SectionWithGreenBorder(text: "Follow Doctos"),
+          SizedBox(height: 15.h),
+          const IconUserDoctorWithDesignation(
+            image: "profile1.png",
+            name: "Dr. Ifram Dewan",
+            designation: "Professior",
+            education: "MBBS, FCPS, MD",
+          ),
+          SizedBox(height: 15.h),
+          const IconUserDoctorWithDesignation(
+            image: "profile6.png",
+            name: "Dr. Khairul Hasan",
+            designation: "Professior",
+            education: "MBBS, FCPS, MD",
+          ),
+          SizedBox(height: 15.h),
+          const IconUserDoctorWithDesignation(
+            image: "profile5.png",
+            name: "Dr. Faysal Ahmed",
+            designation: "Professior",
+            education: "MBBS, FCPS, MD",
+          ),
+          SizedBox(height: 25.h),
+          const SectionWithGreenBorder(text: "Follow Consultant"),
+          SizedBox(height: 15.h),
+          const IconUserDoctorWithDesignation(
+            image: "profile7.png",
+            name: "Dr. Sifatullah Haque",
+            designation: "Professior",
+            education: "MBBS, FCPS, MD",
+          ),
+          SizedBox(height: 15.h),
+          const IconUserDoctorWithDesignation(
+            image: "profile4.png",
+            name: "Dr. Sumaiya Rahman",
+            designation: "Professior",
+            education: "MBBS, FCPS, MD",
+          ),
+          SizedBox(height: 15.h),
+          const IconUserDoctorWithDesignation(
+            image: "blog2.png",
+            name: "Dr. Saharaz Hamim",
+            designation: "Professior",
+            education: "MBBS, FCPS, MD",
+          ),
+          SizedBox(height: 15.h),
+        ],
+      ),
+    );
+  }
+}
+
 class DetailsTabBar extends StatelessWidget {
   const DetailsTabBar({
     super.key,
@@ -160,7 +229,7 @@ class DetailsTabBar extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SectionWithGreenBorder(
+          const SectionWithGreenBorder(
             text: "Shedule With Doctor(s)",
           ),
           SizedBox(

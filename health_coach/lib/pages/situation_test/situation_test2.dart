@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/const/button.dart';
 import 'package:health_coach/const/color_is.dart';
+import 'package:health_coach/pages/situation_test/test_result.dart';
 
 class SituationTest2 extends StatelessWidget {
   const SituationTest2({super.key});
@@ -69,7 +70,12 @@ class SituationTest2 extends StatelessWidget {
             SizedBox(height: 15.h),
             const CheckOption(text: "Agree"),
             SizedBox(height: 50.h),
-            const Center(child: button(text: "Next", size: 160))
+            const Center(
+                child: button(
+              text: "Next",
+              size: 160,
+              destination: TestResult(),
+            ))
           ],
         ),
       ),
