@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/const/button.dart';
 import 'package:health_coach/const/color_is.dart';
+import 'package:health_coach/pages/login_signup/login.dart';
 
 class IconUserDoctorWithDesignation extends StatelessWidget {
   final String image;
@@ -80,7 +82,7 @@ class _UserFileHeaderState extends State<UserFileHeader> {
             });
           },
           child: CircleAvatar(
-            radius: 50.h,
+            radius: 30.h,
             backgroundColor: isAnonymous ? Colors.green : null,
             backgroundImage: isAnonymous
                 ? null
@@ -92,7 +94,7 @@ class _UserFileHeaderState extends State<UserFileHeader> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              isAnonymous ? "Anonymous" : "Sarker Sifatullah Haque",
+              isAnonymous ? "Anonymous" : "Sifatullah Haque",
               style: TextStyle(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w500,
@@ -102,6 +104,20 @@ class _UserFileHeaderState extends State<UserFileHeader> {
             const Text("Hey! How's it going?"),
           ],
         ),
+        const Spacer(), // Add Spacer to push the menu icon to the right
+        //logut icon will be added here
+        GestureDetector(
+          onTap: () {
+            FirebaseAuth.instance.signOut();
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => const Login()));
+          },
+          child: Icon(
+            Icons.logout,
+            size: 30.h,
+            color: Colors.red,
+          ),
+        )
       ],
     );
   }

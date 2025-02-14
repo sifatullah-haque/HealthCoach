@@ -152,6 +152,8 @@ class HeroBanners extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final questionProvider = PHQ9QuestionProvider();
+
     return Column(
       children: [
         Row(
@@ -170,8 +172,14 @@ class HeroBanners extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SituationTest()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SituationTest(
+                      questionProvider: questionProvider,
+                    ),
+                  ),
+                );
               },
               child: Image.asset("assets/images/banner4.png", height: 115.h),
             ),

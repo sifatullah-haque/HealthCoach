@@ -116,6 +116,7 @@ class DoctorsProfile extends StatelessWidget {
                                 const button(
                                   text: "Talk With Doctor",
                                   size: 250,
+                                  destinationType: "push",
                                   destination: Messages(),
                                 )
                               ],
@@ -156,6 +157,7 @@ class DoctorsProfile extends StatelessWidget {
                                     child: button(
                                       text: "Talk With Doctor",
                                       size: 250,
+                                      destinationType: "push",
                                       destination: Messages(),
                                     ),
                                   )
@@ -271,6 +273,7 @@ class DetailsDoctorTabBar extends StatelessWidget {
             child: button(
           text: "Talk With Doctor",
           size: 250,
+          destinationType: "push",
           destination: Messages(),
         ))
       ],

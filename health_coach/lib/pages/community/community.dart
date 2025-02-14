@@ -55,6 +55,7 @@ class Community extends StatelessWidget {
                     child: button(
                       text: "Post",
                       size: 100,
+                      destinationType: "pushReplacement",
                       destination: HomePageTest(),
                     ),
                   )

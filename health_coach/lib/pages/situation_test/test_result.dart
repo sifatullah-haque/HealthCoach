@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/const/color_is.dart';
+import 'package:health_coach/pages/home_page/homepage.dart';
+import 'package:health_coach/pages/home_page/homepage_test.dart';
 
 class TestResult extends StatelessWidget {
-  const TestResult({super.key});
+  final double score;
+  final String severity;
+  final String suggestion;
+
+  const TestResult({
+    super.key,
+    required this.score,
+    required this.severity,
+    required this.suggestion,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,35 +44,34 @@ class TestResult extends StatelessWidget {
               //              Score & Suggestion Part
               //-------------------------------------------------
               Text(
-                "Your Score:",
+                "Your PHQ-9 Score:",
                 style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w500),
               ),
               SizedBox(height: 5.h),
-              const BoxWithText(
-                text: "55.7",
+              BoxWithText(
+                text: score.toString(),
                 size: 60,
                 fsize: 22,
               ),
               SizedBox(height: 15.h),
               Text(
-                "You're Now: ",
+                "Depression Severity:",
                 style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w500),
               ),
               SizedBox(height: 5.h),
-              const BoxWithText(
-                text: "Depressed",
+              BoxWithText(
+                text: severity,
                 size: 60,
                 fsize: 22,
               ),
               SizedBox(height: 15.h),
               Text(
-                "Suggestions:",
+                "Recommendations:",
                 style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w500),
               ),
               SizedBox(height: 5.h),
-              const BoxWithText(
-                text:
-                    "Seek support from loved ones or professionals, prioritize self-care, and hold onto hope for better days ahead.",
+              BoxWithText(
+                text: suggestion,
                 size: 150,
                 fsize: 19.5,
               ),
@@ -124,6 +134,34 @@ class TestResult extends StatelessWidget {
                 image: "blog3.png",
                 title: "How to be Happy?",
                 description: "Happiness lies into our mind. Here are ...",
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
+              //home page button
+
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => HomePageTest()));
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 50.h,
+                  decoration: BoxDecoration(
+                    color: Coloris.green,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Back to Home",
+                      style: TextStyle(
+                          fontSize: 20.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Coloris.backgroundColor),
+                    ),
+                  ),
+                ),
               ),
               SizedBox(
                 height: 20.h,

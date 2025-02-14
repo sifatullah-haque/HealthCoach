@@ -7,12 +7,14 @@ class button extends StatelessWidget {
   final String text;
   final double size;
   final Widget destination;
+  final String destinationType;
 
   const button({
     super.key,
     required this.text,
     required this.size,
     required this.destination,
+    required this.destinationType,
   });
 
   @override
@@ -21,12 +23,30 @@ class button extends StatelessWidget {
       width: size.w,
       child: ElevatedButton(
         style: ButtonStyle(
-            backgroundColor: const MaterialStatePropertyAll(Coloris.green),
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+            backgroundColor: const WidgetStatePropertyAll(Coloris.green),
+            shape: WidgetStateProperty.all(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0)))),
         onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => destination));
+          if (destinationType == "push") {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => destination));
+          } else if (destinationType == "replace") {
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => destination));
+          } else if (destinationType == "pop") {
+            Navigator.pop(context);
+          } else if (destinationType == "popUntil") {
+            Navigator.popUntil(
+                context, ModalRoute.withName(destination.toString()));
+          } else if (destinationType == "pushAndRemoveUntil") {
+            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => destination),
+                ModalRoute.withName(destination.toString()));
+          } else if (destinationType == "pushReplacement") {
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => destination));
+          }
         },
         child: Text(
           text,

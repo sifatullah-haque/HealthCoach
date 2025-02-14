@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_coach/const/color_is.dart';
+import 'package:health_coach/pages/messages/aiChatbot.dart';
 
 class Messages extends StatelessWidget {
   const Messages({super.key});
@@ -18,10 +19,15 @@ class Messages extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
-            const MessagesList(
-              images: "logo/icon.png",
-              name: "Mental Coach (AI)",
-              message: "You: Are you sure?",
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AiChatBot()));
+              },
+              child: const MessagesList(
+                  images: "logo/icon.png",
+                  name: "Mental Coach (AI)",
+                  message: "Let's talk"),
             ),
             SizedBox(height: 10.h),
             const MessagesList(

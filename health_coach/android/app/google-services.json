@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "947217191298",
+    "project_id": "health-coach-f4ae1",
+    "storage_bucket": "health-coach-f4ae1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947217191298:android:e937b4b3ab2e1eaeb8bf9b",
+        "android_client_info": {
+          "package_name": "com.example.health_coach"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWdFGgiVMFMUiba-fhLNepu56R8kQWlRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

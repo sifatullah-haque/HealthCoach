@@ -129,6 +129,7 @@ class signUp extends StatelessWidget {
                 text: "Create",
                 size: 300,
                 destination: HomePageTest(),
+                destinationType: "pushReplacement",
               ),
               SizedBox(height: 50.h),
               const Row(

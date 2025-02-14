@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "healthcoach"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "healthcoach-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
